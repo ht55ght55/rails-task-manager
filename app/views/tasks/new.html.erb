@@ -1,0 +1,22 @@
+<!-- <form action="#">
+  <label for="title">Title</label>
+  <input type="text" name="task[title]" id="title">
+  <label for="details">Description</label>
+  <input type="text" name="task[details]" id="details">
+  <label for="">Completed</label>
+  <input type="checkbox">
+  <input type="submit">
+</form>
+
+ -->
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_field :details, class: 'form-control' %>
+  </div>
+    <%= f.submit class: 'btn btn-primary' %>
+<% end %>
